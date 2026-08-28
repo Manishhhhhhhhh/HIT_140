@@ -1,0 +1,100 @@
+HIT140 FIFA WORLD CUP 2026
+MY TWO ANALYTIC TASKS - FINAL NUMERICAL RESULTS
+============================================================
+
+DATA SOURCE
+Official FIFA World Cup 2026 public statistics APIs.
+
+TASK 1 - PASSING PERFORMANCE
+------------------------------------------------------------
+Question:
+Among defenders and midfielders who played at least
+90 minutes and attempted at least
+20 passes, is there a difference in
+average pass-completion rate?
+
+Feature:
+pass_completion_rate =
+passes_completed / passes_attempted * 100
+
+Sampling:
+n = 30 defenders
+n = 30 midfielders
+Fixed random seed = 42
+
+Defenders:
+Mean = 86.36%
+95% CI = [83.83%,
+          88.90%]
+
+Midfielders:
+Mean = 87.87%
+95% CI = [85.92%,
+          89.82%]
+
+H0: mu_DF = mu_MF
+Ha: mu_DF != mu_MF
+
+t = -0.966
+df = 29
+p = 0.3423
+
+Decision:
+Fail to reject H0
+
+Interpretation:
+At the 5% significance level, the sample does not provide sufficient statistical evidence that mean pass-completion rate differs between eligible defenders and midfielders.
+
+
+TASK 2 - SHOOTING ACCURACY
+------------------------------------------------------------
+Question:
+Among forwards and midfielders who played at least
+90 minutes and attempted at least
+3 shots, is there a difference in
+average shot-on-target rate?
+
+Feature:
+shot_on_target_rate =
+shots_on_target / shots * 100
+
+Sampling:
+n = 30 forwards
+n = 30 midfielders
+Fixed random seed = 142
+
+Forwards:
+Mean = 37.34%
+95% CI = [28.26%,
+          46.43%]
+
+Midfielders:
+Mean = 31.77%
+95% CI = [24.29%,
+          39.26%]
+
+H0: mu_FW = mu_MF
+Ha: mu_FW != mu_MF
+
+t = 0.968
+df = 29
+p = 0.3410
+
+Decision:
+Fail to reject H0
+
+Interpretation:
+At the 5% significance level, the sample does not provide sufficient statistical evidence that mean shot-on-target rate differs between eligible forwards and midfielders.
+
+
+LIMITATIONS
+------------------------------------------------------------
+1. This is observational tournament data; statistical differences
+   do not demonstrate causation.
+2. Eligibility rules are used to avoid highly unstable rates from
+   players with extremely little playing time or opportunity.
+3. Position classification simplifies complex or hybrid player roles.
+4. Sampling introduces sampling error, represented through the
+   confidence intervals.
+5. Results apply to the defined eligible World Cup 2026 populations,
+   not automatically to football players in other competitions.
