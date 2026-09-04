@@ -1,84 +1,193 @@
 # HIT140 Foundation of Data Science
-## FIFA World Cup 2026 — Student Part (Analytic Tasks 1 and 2)
+## FIFA World Cup 2026 — Objective 1
+### Student Contribution: Analytic Tasks 1 and 2
 
-This folder contains the complete working material for the student's two Objective 1 analytic tasks.
+This repository contains the completed Python analysis for my two assigned Objective 1 analytic tasks in the HIT140 Foundation of Data Science group project.
 
-### Final task questions
+## Analytic Task 1 — Passing Performance
 
-**Task 1 — Passing / Distribution**
+**Question:**  
+Among FIFA World Cup 2026 defenders and midfielders who played at least 90 minutes and attempted at least 20 passes, is there a difference in their average pass-completion rate?
 
-> Among FIFA World Cup 2026 defenders and midfielders who played at least 90 minutes and attempted at least 20 passes, is there a difference in average pass-completion rate?
+**Feature constructed:**
 
-**Task 2 — Shooting / Attacking**
+`pass_completion_rate = passes_completed / passes_attempted * 100`
 
-> Among FIFA World Cup 2026 forwards and midfielders who played at least 90 minutes and attempted at least 3 shots, is there a difference in average shot-on-target rate?
+**Groups compared:**
+- Defenders (DF)
+- Midfielders (MF)
 
-These are distinct from the teammate's yellow-card and goalkeeping focal points.
+**Sampling:**
+- 30 defenders
+- 30 midfielders
+- Reproducible random sampling using a fixed random seed
 
-## What is included
+**Inferential method:**
+- 95% confidence intervals
+- Independent two-sample t-test
 
-- `HIT140_Tasks_1_2_Complete.ipynb` — main Jupyter notebook, with written methodology and all Python analysis.
-- `HIT140_Tasks_1_2_Full_Analysis.py` — full script version.
-- `requirements.txt` — Python packages.
-- `PRESENTATION_NOTES.md` — slide structure and speaking guidance for the student's two tasks.
-- `AI_USAGE_DRAFT.md` — draft reflective wording to adapt for the compulsory AI declaration.
-- `TEAMS_COLLABORATION_CHECKLIST.md` — evidence checklist for the 20% collaboration/documentation criterion.
-- `data/` — source, cleaned, population and sampled CSVs will be saved here.
-- `outputs/` — statistics, t-tests, graphs and slide-ready results will be saved here.
+## Analytic Task 2 — Shooting Accuracy
 
-## How to run
+**Question:**  
+Among FIFA World Cup 2026 forwards and midfielders who played at least 90 minutes and attempted at least 3 shots, is there a difference in their average shot-on-target rate?
 
-1. Keep the folder structure unchanged.
-2. Open a terminal in this folder.
-3. Install dependencies:
+**Feature constructed:**
 
-   `pip install -r requirements.txt`
+`shot_on_target_rate = shots_on_target / shots * 100`
 
-4. Start Jupyter:
+**Groups compared:**
+- Forwards (FW)
+- Midfielders (MF)
 
-   `jupyter notebook`
+**Sampling:**
+- 30 forwards
+- 30 midfielders
+- Reproducible random sampling using a fixed random seed
 
-5. Open `HIT140_Tasks_1_2_Complete.ipynb`.
-6. Choose **Run All**.
-7. Read every output and check there are no errors.
-8. Open `outputs/slide_ready_results.txt`. This contains the real numeric results for the PowerPoint.
+**Inferential method:**
+- 95% confidence intervals
+- Independent two-sample t-test
 
-Alternatively:
+## Data Source
 
-`python HIT140_Tasks_1_2_Full_Analysis.py`
+The analysis uses FIFA World Cup 2026 data obtained from the official FIFA public data source.
 
-## Why results are not hard-coded
+The Python script automatically downloads:
+- participating teams;
+- squad and player information;
+- player positions;
+- tournament player statistics.
 
-The notebook obtains the actual World Cup 2026 data and calculates the real results. Statistical numbers must not be invented. The sample is reproducible because a fixed random seed is used.
+The downloaded and processed datasets are saved in the `data/` folder.
 
-## Data and Objective 1 coverage
+## Python Skills Used
 
-Each task includes:
+The analysis applies skills from Weeks 1–5 of HIT140, including:
 - analytic question formulation;
+- population and sample definition;
 - data acquisition;
-- data cleaning and wrangling;
-- a merge operation;
-- missing-value handling;
+- data wrangling with `pandas`;
+- joining and merging datasets;
+- handling missing values;
 - feature construction;
-- population and unit-of-observation definition;
-- pre-specified inclusion/exclusion rules;
 - random sampling;
 - descriptive statistics;
-- 95% t confidence intervals;
+- 95% confidence intervals;
+- hypothesis testing;
 - independent two-sample t-tests;
-- State → Plan → Solve → Conclude;
-- Python plots;
-- interpretation and limitations.
+- Python visualisation.
 
-## Important assessment reminders
+## Repository Structure
 
-- All wrangling, statistics and visualisation are done in Python.
-- Keep the datasets generated in `data/` with the Python code in the team's OneDrive/GitHub/BitBucket repository.
-- Make sure you can explain every line and every statistical decision.
-- Do not use the prohibited "average goals scored by a forward" example.
-- Show CDU student ID at the beginning of your recorded segment.
-- Keep your face visible during the presentation.
-- Each individual presentation segment must be no longer than 3 minutes.
-- The final team recording must follow the group time requirement.
-- Sign and submit the AI Usage Declaration Form.
-- Document actual collaboration in the lecturer-created Microsoft Teams space.
+```text
+HIT_140/
+│
+├── HIT140_Tasks_1_2_FIFA_Final.py
+├── README.md
+├── requirements.txt
+│
+├── data/
+│   ├── fifa_2026_teams.csv
+│   ├── fifa_2026_players.csv
+│   ├── fifa_2026_player_stats_long.csv
+│   ├── fifa_2026_player_stats_wide.csv
+│   ├── fifa_2026_analysis_master.csv
+│   ├── task1_population.csv
+│   ├── task1_sample.csv
+│   ├── task2_population.csv
+│   └── task2_sample.csv
+│
+└── outputs/
+    ├── task1_descriptive_statistics.csv
+    ├── task1_confidence_intervals.csv
+    ├── task1_ttest.csv
+    ├── task1_boxplot.png
+    ├── task1_confidence_intervals.png
+    ├── task2_descriptive_statistics.csv
+    ├── task2_confidence_intervals.csv
+    ├── task2_ttest.csv
+    ├── task2_boxplot.png
+    ├── task2_confidence_intervals.png
+    └── slide_ready_results.txt
+```
+
+## How to Run
+
+1. Keep the repository folder structure unchanged.
+
+2. Open a terminal in the project folder.
+
+3. Install the required Python packages:
+
+```bash
+py -m pip install -r requirements.txt
+```
+
+4. Run the final analysis script:
+
+```bash
+py HIT140_Tasks_1_2_FIFA_Final.py
+```
+
+5. The script will automatically:
+   - obtain FIFA World Cup 2026 data;
+   - prepare and clean the datasets;
+   - create the Task 1 and Task 2 eligible populations;
+   - select reproducible random samples;
+   - calculate descriptive statistics;
+   - calculate 95% confidence intervals;
+   - perform independent two-sample t-tests;
+   - generate visualisations;
+   - save all datasets and results.
+
+6. Open:
+
+```text
+outputs/slide_ready_results.txt
+```
+
+to view the final numerical results used in the presentation.
+
+## Reproducibility
+
+All statistical results are calculated directly in Python from the downloaded FIFA World Cup 2026 data.
+
+The numerical results are not manually entered into the analysis.
+
+Fixed random seeds are used so that the selected samples can be reproduced when the script is rerun with the same source data.
+
+## Task 1 Final Result
+
+- Defenders mean pass-completion rate: **86.36%**
+- Midfielders mean pass-completion rate: **87.87%**
+- Two-sample t-test: **t = -0.966**
+- **p = 0.342**
+- Decision: **Fail to reject H0**
+
+At the 5% significance level, the sample does not provide sufficient statistical evidence that the average pass-completion rate differs between eligible defenders and midfielders.
+
+## Task 2 Final Result
+
+- Forwards mean shot-on-target rate: **37.35%**
+- Midfielders mean shot-on-target rate: **31.77%**
+- Two-sample t-test: **t = 0.968**
+- **p = 0.341**
+- Decision: **Fail to reject H0**
+
+At the 5% significance level, the sample does not provide sufficient statistical evidence that the average shot-on-target rate differs between eligible forwards and midfielders.
+
+## Limitations
+
+- The analysis uses observational tournament data, so results should not be interpreted as causal.
+- Eligibility thresholds were used to reduce unstable percentages from very small numbers of passes or shots.
+- Hybrid player roles were simplified using a consistent primary-position rule.
+- Sampling introduces sampling error, which is reflected in the confidence intervals.
+- Results apply to the defined FIFA World Cup 2026 eligible populations.
+
+## Academic Integrity and AI Use
+
+Generative AI was used as a support tool for brainstorming analytic questions, structuring the Python workflow, explaining statistical concepts, debugging code, and helping prepare the presentation structure.
+
+All final numerical results were calculated from the FIFA World Cup 2026 data using Python.
+
+AI usage is acknowledged separately in the required CDU AI Usage Declaration Form.
