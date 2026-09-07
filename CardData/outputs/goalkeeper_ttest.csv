@@ -1,0 +1,2 @@
+t_statistic,p_value,alpha,decision,conclusion
+3.9640247203574215,0.0003325829165879282,0.05,Reject H0,There is statistically significant evidence at the 5% level that mean goalkeeper save percentage differs between the two groups.

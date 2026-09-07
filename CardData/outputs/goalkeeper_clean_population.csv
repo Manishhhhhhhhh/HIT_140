@@ -1,5 +1,5 @@
 Rank,Team,Clean Sheets,Goals Conceded,Goalkeeper Saves,Goalkeeper Actions Inside the Penalty Area,Goalkeeper Actions Outside the Penalty Area,Shots on Target Faced (proxy),Save Percentage,Clean Sheet Group
-1.0,Spain,7.0,1.0,14.0,120.0,93.0,15.0,93.33333333333333,At least 1 clean sheet
+1.0,Spain,7.0,1.0,14.0,120.0,93.0,15.0,93.33333333333331,At least 1 clean sheet
 2.0,France,4.0,10.0,15.0,108.0,86.0,25.0,60.0,At least 1 clean sheet
 2.0,Colombia,4.0,1.0,7.0,57.0,54.0,8.0,87.5,At least 1 clean sheet
 2.0,Mexico,4.0,3.0,8.0,60.0,49.0,11.0,72.72727272727273,At least 1 clean sheet
@@ -26,7 +26,7 @@ Rank,Team,Clean Sheets,Goals Conceded,Goalkeeper Saves,Goalkeeper Actions Inside
 18.0,Senegal,1.0,9.0,13.0,87.0,70.0,22.0,59.09090909090909,At least 1 clean sheet
 18.0,Saudi Arabia,1.0,5.0,17.0,86.0,78.0,22.0,77.27272727272727,At least 1 clean sheet
 18.0,IR Iran,1.0,3.0,15.0,75.0,65.0,18.0,83.33333333333334,At least 1 clean sheet
-28.0,Haiti,0.0,8.0,13.0,56.0,48.0,21.0,61.904761904761905,No clean sheet
+28.0,Haiti,0.0,8.0,13.0,56.0,48.0,21.0,61.90476190476191,No clean sheet
 28.0,Türkiye,0.0,5.0,8.0,55.0,46.0,13.0,61.53846153846154,No clean sheet
 28.0,Uzbekistan,0.0,11.0,6.0,82.0,65.0,17.0,35.294117647058826,No clean sheet
 28.0,Panama,0.0,4.0,9.0,48.0,42.0,13.0,69.23076923076923,No clean sheet
