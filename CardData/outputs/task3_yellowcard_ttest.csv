@@ -1,0 +1,2 @@
+t_statistic,p_value,alpha,decision,conclusion
+-0.583243529150442,0.5625968569513617,0.05,Fail to reject H0,There is insufficient statistical evidence at the 5% level to conclude that mean yellow-card rate per 90 minutes differs between eligible defenders and forwards.
