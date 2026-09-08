@@ -83,24 +83,20 @@ At the 5% significance level, the sample does not provide sufficient statistical
 
 **Question**
 
-Among FIFA World Cup 2026 players who played at least 90 minutes, does average yellow-card rate per 90 minutes differ between defenders and forwards?
-
-**Constructed variable**
-
-`yellow_cards_per_90 = yellowcards / (minutes / 90)`
+Among FIFA World Cup players who played at least 90 minutes, does average yellow-card rate per 90 minutes differ between players from 2022 and 2026?
 
 **Groups compared**
-- Defenders (DF)
-- Forwards (FW)
+- 2022
+- 2026
 
 **Eligible population**
-- 279 defenders
-- 176 forwards
+- 2022 32 teams
+- 2026 48 teams
 
 **Sampling**
-- 30 defenders
-- 30 forwards
-- Reproducible random sampling using a fixed random seed
+- 30 teams 2022
+- 30 teams 2026
+- Reproducible random sampling using fixed random seeds : 32, 48 respectively
 
 **Statistical methods**
 - Descriptive statistics
@@ -108,8 +104,8 @@ Among FIFA World Cup 2026 players who played at least 90 minutes, does average y
 - Welch independent two-sample t-test
 
 **Final result**
-- Defenders mean: **0.0659 yellow cards per 90**
-- Forwards mean: **0.0969 yellow cards per 90**
+- 2022 mean: **1.8076 yellow cards per 90**
+- 2026 mean: **1.3724 yellow cards per 90**
 - `t = -0.5832`
 - `p = 0.562597`
 - Decision: **Fail to reject H0**
@@ -122,39 +118,34 @@ At the 5% significance level, there is insufficient statistical evidence to conc
 
 **Question**
 
-Among FIFA World Cup 2026 teams, is average goalkeeper save percentage different between teams that recorded at least one clean sheet and teams that recorded no clean sheets?
-
-**Constructed variable**
-
-`save_percentage = goalkeeper_saves / (goalkeeper_saves + goals_conceded) * 100`
+Among FIFA World Cup 2026 teams, is average goalkeeper saves greater then the average goals per match?
 
 **Groups compared**
-- Teams with at least one clean sheet
-- Teams with no clean sheet
+- Goalkeeper Saves per team
+- Average match goals 2026 : 2.96
 
 **Eligible population**
-- 27 teams with at least one clean sheet
-- 21 teams with no clean sheet
+- 48 teams
+
 
 **Sampling**
-- 20 teams from each group
-- Reproducible stratified random sampling
+- 30 teams 
+- Reproducible random sampling using fixed random seed : 52
 
 **Statistical methods**
 - Descriptive statistics
 - 95% t-confidence intervals
-- Welch independent two-sample t-test
+- Welch independent one-sample t-test
 
 **Final result**
-- At least one clean sheet mean: **72.98%**
-- No clean sheet mean: **59.15%**
-- `t = 3.964`
-- `p = 0.000333`
+- Average goals saved per team: **3.1717**
+- Average goals scored per match: **1.3176**
+- `t = 0.8799`
+- `p = 0.1931`
 - Decision: **Reject H0**
 
-There is statistically significant evidence at the 5% level that mean goalkeeper save percentage differs between the two groups.
+There isn't statistically significant evidence at the 5% level that mean goalkeeper saves is greater then average goals per match.
 
-This is an observational association and should not be interpreted as proof that clean sheets cause higher save percentages.
 
 ---
 
