@@ -106,9 +106,9 @@ Among FIFA World Cup players who played at least 90 minutes, does average yellow
 **Final result**
 - 2022 mean: **1.8076 yellow cards per 90**
 - 2026 mean: **1.3724 yellow cards per 90**
-- `t = -0.5832`
-- `p = 0.562597`
-- Decision: **Fail to reject H0**
+- `t = 2.5274`
+- `p = 0.0146`
+- Decision: **Reject H0**
 
 At the 5% significance level, there is insufficient statistical evidence to conclude that average yellow-card rate per 90 minutes differs between eligible defenders and forwards.
 
@@ -142,7 +142,7 @@ Among FIFA World Cup 2026 teams, is average goalkeeper saves greater then the av
 - Average goals scored per match: **1.3176**
 - `t = 0.8799`
 - `p = 0.1931`
-- Decision: **Reject H0**
+- Decision: **Failure to reject H0**
 
 There isn't statistically significant evidence at the 5% level that mean goalkeeper saves is greater then average goals per match.
 
