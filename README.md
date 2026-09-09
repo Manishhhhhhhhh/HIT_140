@@ -228,7 +228,7 @@ HIT_140/
 │   ├── task2_descriptive_statistics.csv
 │   └── task2_ttest.csv
 │
-└── CardData/
+└── Focal_3_4/
     ├── FIFA_Goalkeeper_2026.csv
     ├── Goalsaves.py
     ├── Yellowcard_2026_Final.py
@@ -272,13 +272,13 @@ py .\HIT140_Tasks_1_2_FIFA_Final.py
 ### Run Yellow-Card analysis
 
 ```bash
-py .\CardData\Yellowcard_2026_Final.py
+py .\Focal_3_4\Yellow_Card_2022VS2026.py
 ```
 
 ### Run Goalkeeping analysis
 
 ```bash
-py .\CardData\Goalsaves.py
+py .\Focal_3_4\FIFA_Goal_SavesVSAverage_Goals.py
 ```
 
 Each script saves its calculated statistics and visualisations to the appropriate `outputs/` folder.
