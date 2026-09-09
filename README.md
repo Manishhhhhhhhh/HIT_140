@@ -85,6 +85,10 @@ At the 5% significance level, the sample does not provide sufficient statistical
 
 Among FIFA World Cup players who played at least 90 minutes, does average yellow-card rate per 90 minutes differ between players from 2022 and 2026?
 
+**Constructed variable**
+
+`CrdY_per90 = CrdY / 90s`
+
 **Groups compared**
 - 2022
 - 2026
@@ -110,7 +114,7 @@ Among FIFA World Cup players who played at least 90 minutes, does average yellow
 - `p = 0.0146`
 - Decision: **Reject H0**
 
-At the 5% significance level, there is insufficient statistical evidence to conclude that average yellow-card rate per 90 minutes differs between eligible defenders and forwards.
+At the 5% significance level, there is sufficient statistical evidence to conclude that average yellow-card rate per 90 minutes differs between 2022 and 2026 results.
 
 ---
 
@@ -118,10 +122,12 @@ At the 5% significance level, there is insufficient statistical evidence to conc
 
 **Question**
 
-Among FIFA World Cup 2026 teams, is average goalkeeper saves greater then the average goals per match?
+Among FIFA World Cup 2026 teams, is average goalkeeper saves per match greater then the average goals per match?
 
 **Groups compared**
-- Goalkeeper Saves per team
+- Goalkeeper Saves per match
+
+**Fixed Benchmark**
 - Average match goals 2026 : 2.96
 
 **Eligible population**
@@ -135,11 +141,10 @@ Among FIFA World Cup 2026 teams, is average goalkeeper saves greater then the av
 **Statistical methods**
 - Descriptive statistics
 - 95% t-confidence intervals
-- Welch independent one-sample t-test
+- One-sample t-test
 
 **Final result**
 - Average goals saved per team: **3.1717**
-- Average goals scored per match: **1.3176**
 - `t = 0.8799`
 - `p = 0.1931`
 - Decision: **Failure to reject H0**
