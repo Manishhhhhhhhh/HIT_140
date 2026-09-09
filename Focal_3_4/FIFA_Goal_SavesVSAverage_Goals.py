@@ -100,7 +100,7 @@ print("\n Conclusion:")
 if p_val < 0.05:
     decision = "We reject the null hypothesis."
 else:
-    decision = "We accept the null hypothesis."
+    decision = "We fail to reject the null hypothesis."
 print("\t " + decision)
 
 #saving t-test results to CSV
